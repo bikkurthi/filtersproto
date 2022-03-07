@@ -235,6 +235,7 @@ var options = {
 };
 var resourcesList = new List("resources", options);
 $(".totalcount").html("Total results: " + resourcesList.size());
+$(".no-result").hide();
 
 function resetList() {
 	resourcesList.search();
@@ -243,6 +244,7 @@ function resetList() {
 	$(".filter").prop("checked", false);
 	$(".search").val("");
 	$(".totalcount").html("Total results: " + resourcesList.size());
+	$(".no-result").hide();
 }
 var activeFilters = [];
 function updateList() {
